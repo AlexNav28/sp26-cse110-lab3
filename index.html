@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2 - CSE 110</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+    <header>
+        <h1>Seizure Prediction First Brainstorm</h1>
+        <h2>Team Alpha Meeting</h2>
+        <h3>Date: April 3, 2026</h3>
+        <p>Location: EnVision Maker Studio</p>
+    </header>
+
+    <nav>
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#attendance">Attendance</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#unfinished">Unfinished Tasks</a></li>
+            <li><a href="#follow-up">Follow-up Tasks</a></li>
+            <li><a href="#comments">Comments</a></li>
+            <li><a href="#recordings">Recordings</a></li>
+            <li><a href="#feedback-form">Feedback Form</a></li>
+        </ul>
+    </nav>
+
+    <hr />
+
+    <main>
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <p>Team members present in this meeting:</p>
+            <ol>
+                <li>Alexis Navarrete — Team Lead</li>
+                <li>David Martinez — Frontend Developer</li>
+                <li>Ahsoka Tano — Backend Developer</li>
+                <li>Paul Atreides — ML Engineer</li>
+                <li>Max Verstappen — Hardware Engineer</li>
+            </ol>
+            <p><b>Absent:</b> <span>Tommy Shelby (excused — sick)</span></p>
+        </section>
+
+        <hr />
+
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <ol>
+                <li>Review unfinished tasks from last metting</li>
+                <li>Discuss follow-up Task</li>
+                <li>Questions and concerns</li>
+                <li>Review architecture diagram</li>
+            </ol>
+        </section>
+
+        <hr />
+
+        <section id="unfinished">
+            <h2>Unfinished Business</h2>
+            <ul>
+                <li>
+                    <strong>Bug fix for readings form device:</strong> Max mentioned that the divice sometimes <b>does
+                    not send the data through the MQTT</b>. This was assigned last metting but is still <i>in progress</i>.
+                </li>
+                <li>
+                    <strong>Unit tests for Sotware:</strong> Ahsoka has completed
+                    <em>8 out of 12</em> planned tests. The rest of the test are Frontend based -- directed to David
+                </li>
+            </ul>
+        </section>
+
+        <hr />
+
+        <section id="follow-up">
+            <h2>Follow-up Tasks</h2>
+            <ul>
+                <li>
+                    <strong>Custom Hardware device:</strong> Test users have requested a more
+                    confortable device and a more disccrete chasis. Max will prototype in CAD.
+                </li>
+                <li>
+                    <strong>Sound notification on seizure prediction device:</strong> David proposed
+                    adding an audio chime when the seizure is going to happen. The team agreed this would
+                    improve the user experience.
+                </li>
+                <li>
+                    <strong>Treshhold of the seizure prediction:</strong> Paul suggested that the treshhold should be between
+                    5 min - 1 min, to incrase the user reaction. The Team agreed.
+                </li>
+                <li>
+                    <strong>Rest mode:</strong> Not a priority right now
+                    but was noted for saving battery life.
+                </li>
+            </ul>
+            <p>
+                Alexis reminded the team that the <strong>MVP deadline</strong> is
+                <em>April 20, 2026</em>.<br />
+                All critical features must be completed by that date.
+            </p>
+        </section>
+
+        <hr />
+
+        <section id="comments">
+            <h2>Comments / Questions / Concerns</h2>
+            <details>
+                <summary>Click to expand miscellaneous notes</summary>
+                <ul>
+                    <li>
+                        Paul is conserd about the presition of the model and would like to have <strong>1-week</strong>
+                        verify and get the best of the model.
+                    </li>
+                    <li>
+                        Max raised a concern about the Hardware Tests. Alexis will look into it.
+                    </li>
+                    <li>
+                        David shared a link to the design mockups:
+                        <a href="https://example.com/mockups" target="_blank">View Mockups</a>
+                    </li>
+                </ul>
+            </details>
+        </section>
+
+        <hr />
+
+        <section id="recordings">
+            <h2>Meeting Recordings and Diagrams</h2>
+
+            <h3>Architecture Diagram</h3>
+            <div>
+                <img
+                    src="Seizure.png"
+                    alt="Whiteboard photo of the meeting"
+                />
+            </div>
+
+            <br />
+
+            <h3>Audio Recording</h3>
+            <p>Audio recording of the meeting:</p>
+            <audio controls>
+                <source src="Human_Texture.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+
+            <br /><br />
+
+            <h3>Video Recording</h3>
+            <p>Video recording of the session:</p>
+            <video controls width="600">
+                <source src="Video_Recording_Ready.mp4" type="video/mp4" />
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <hr />
+
+        <section id="feedback-form">
+            <h2>Meeting Feedback Form</h2>
+            <p>Please fill out this quick feedback form about today's meeting:</p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Meeting Feedback</legend>
+
+                    <label for="name">Name:</label><br />
+                    <input type="text" id="name" name="name" placeholder="Enter your name" /><br /><br />
+
+                    <label for="meeting-date">Meeting Date:</label><br />
+                    <input type="date" id="meeting-date" name="meeting-date" /><br /><br />
+
+                    <label for="team-select">Your Team:</label><br />
+                    <select id="team-select" name="team">
+                        <option value="">-- Select a team --</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="ml">ML</option>
+                    </select>
+                    <br /><br />
+
+                    <label for="role-input">Your Role:</label><br />
+                    <input list="roles" id="role-input" name="role" placeholder="Type or select a role" />
+                    <datalist id="roles">
+                        <option value="Team Lead"></option>
+                        <option value="Developer"></option>
+                        <option value="ML Engineer"></option>
+                        <option value="Hardware Engineer"></option>
+                        <option value="QA Engineer"></option>
+                    </datalist>
+                    <br /><br />
+
+                    <p>How useful was this meeting?</p>
+                    <input type="radio" id="very-useful" name="usefulness" value="very-useful" />
+                    <label for="very-useful">Very Useful</label><br />
+                    <input type="radio" id="somewhat-useful" name="usefulness" value="somewhat-useful" />
+                    <label for="somewhat-useful">Somewhat Useful</label><br />
+                    <input type="radio" id="not-useful" name="usefulness" value="not-useful" />
+                    <label for="not-useful">Not Useful</label><br /><br />
+
+                    <p>Which topics were relevant to you? (Check all that apply)</p>
+                    <input type="checkbox" id="topic-bugs" name="topics" value="bugs" />
+                    <label for="topic-bugs">Bug Fixes</label><br />
+                    <input type="checkbox" id="topic-features" name="topics" value="features" />
+                    <label for="topic-features">New Features</label><br />
+                    <input type="checkbox" id="topic-arch" name="topics" value="architecture" />
+                    <label for="topic-arch">Architecture Review</label><br /><br />
+
+                    <label for="feedback-comments">Additional Comments:</label><br />
+                    <textarea id="feedback-comments" name="comments" rows="4" cols="50" placeholder="Any thoughts on how we can improve?"></textarea>
+                </fieldset>
+
+                <br />
+
+                <button type="submit">Submit Feedback</button>
+                <button type="reset">Clear Form</button>
+
+            </form>
+        </section>
+    </main>
+
+    <hr />
+
+    <footer>
+        <p>
+            Meeting minutes recorded by <strong>Alexis Navarrete</strong>.<br />
+            Next meeting: <em>April 10, 2026</em>
+        </p>
+        <p>
+            <a href="#top">Back to top</a>
+        </p>
+    </footer>
+</body>
+</html>
