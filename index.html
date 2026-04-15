@@ -3,50 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab2 - CSE 110</title>
+    <title>Lab3 - CSE 110</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Internal CSS with <style> + Google Font @import -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <h1>Seizure Prediction First Brainstorm</h1>
-        <h2>Team Alpha Meeting</h2>
-        <h3>Date: April 3, 2026</h3>
-        <p>Location: EnVision Maker Studio</p>
-    </header>
+<body id="top" class="noto-serif-body">
 
-    <nav>
-        <h3>Quick Links</h3>
-        <ul>
+    <nav class="sticky-nav">
+        <ul class="nav-links">
             <li><a href="#attendance">Attendance</a></li>
             <li><a href="#agenda">Agenda</a></li>
-            <li><a href="#unfinished">Unfinished Tasks</a></li>
-            <li><a href="#follow-up">Follow-up Tasks</a></li>
+            <li><a href="#unfinished">Unfinished</a></li>
+            <li><a href="#follow-up">Follow-up</a></li>
             <li><a href="#comments">Comments</a></li>
             <li><a href="#recordings">Recordings</a></li>
-            <li><a href="#feedback-form">Feedback Form</a></li>
+            <li><a href="#feedback-form">Feedback</a></li>
         </ul>
     </nav>
 
-    <hr />
+    <header id="meeting-header">
+        <h1>Seizure Prediction First Brainstorm</h1>
+        <h2>Team Alpha Meeting</h2>
+        <!-- Inline CSS -->
+        <span class="date-badge" style="margin-top: 0.6rem;">April 3, 2026</span>
+        <br />
+        <span class="location-badge">Location: EnVision Maker Studio</span>
+    </header>
 
     <main>
-        <section id="attendance">
+        <section id="attendance" class="section-card">
             <h2>Attendance</h2>
             <p>Team members present in this meeting:</p>
-            <ol>
-                <li>Alexis Navarrete — Team Lead</li>
-                <li>David Martinez — Frontend Developer</li>
-                <li>Ahsoka Tano — Backend Developer</li>
-                <li>Paul Atreides — ML Engineer</li>
-                <li>Max Verstappen — Hardware Engineer</li>
-            </ol>
+
+            <!-- Grid layout -->
+            <div class="team-grid">
+                <div>Alexis Navarrete — Team Lead</div>
+                <div>David Martinez — Frontend Developer</div>
+                <div>Ahsoka Tano — Backend Developer</div>
+                <div>Paul Atreides — ML Engineer</div>
+                <div>Max Verstappen — Hardware Engineer</div>
+            </div>
             <p><b>Absent:</b> <span>Tommy Shelby (excused — sick)</span></p>
         </section>
 
         <hr />
 
-        <section id="agenda">
+        <section id="agenda" class="section-card">
             <h2>Agenda</h2>
             <ol>
                 <li>Review unfinished tasks from last metting</li>
@@ -58,14 +72,14 @@
 
         <hr />
 
-        <section id="unfinished">
+        <section id="unfinished" class="section-card">
             <h2>Unfinished Business</h2>
-            <ul>
-                <li>
+            <ul class="task-list">
+                <li data-status="in-progress">
                     <strong>Bug fix for readings form device:</strong> Max mentioned that the divice sometimes <b>does
                     not send the data through the MQTT</b>. This was assigned last metting but is still <i>in progress</i>.
                 </li>
-                <li>
+                <li data-status="in-progress">
                     <strong>Unit tests for Sotware:</strong> Ahsoka has completed
                     <em>8 out of 12</em> planned tests. The rest of the test are Frontend based -- directed to David
                 </li>
@@ -74,23 +88,23 @@
 
         <hr />
 
-        <section id="follow-up">
+        <section id="follow-up" class="section-card">
             <h2>Follow-up Tasks</h2>
-            <ul>
-                <li>
+            <ul class="task-list">
+                <li data-status="in-progress">
                     <strong>Custom Hardware device:</strong> Test users have requested a more
                     confortable device and a more disccrete chasis. Max will prototype in CAD.
                 </li>
-                <li>
+                <li data-status="done">
                     <strong>Sound notification on seizure prediction device:</strong> David proposed
                     adding an audio chime when the seizure is going to happen. The team agreed this would
                     improve the user experience.
                 </li>
-                <li>
+                <li data-status="done">
                     <strong>Treshhold of the seizure prediction:</strong> Paul suggested that the treshhold should be between
                     5 min - 1 min, to incrase the user reaction. The Team agreed.
                 </li>
-                <li>
+                <li data-status="blocked">
                     <strong>Rest mode:</strong> Not a priority right now
                     but was noted for saving battery life.
                 </li>
@@ -104,7 +118,7 @@
 
         <hr />
 
-        <section id="comments">
+        <section id="comments" class="section-card">
             <h2>Comments / Questions / Concerns</h2>
             <details>
                 <summary>Click to expand miscellaneous notes</summary>
@@ -126,7 +140,7 @@
 
         <hr />
 
-        <section id="recordings">
+        <section id="recordings" class="section-card media-section">
             <h2>Meeting Recordings and Diagrams</h2>
 
             <h3>Architecture Diagram</h3>
@@ -159,7 +173,7 @@
 
         <hr />
 
-        <section id="feedback-form">
+        <section id="feedback-form" class="section-card">
             <h2>Meeting Feedback Form</h2>
             <p>Please fill out this quick feedback form about today's meeting:</p>
 
